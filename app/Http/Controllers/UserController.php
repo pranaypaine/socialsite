@@ -49,7 +49,9 @@ class UserController extends Controller
 	}
 	public function getUserProfile($user_id)
     {
-    	return view('profile');
+    	//$user_details = User::where('id', $user_id)->first();
+
+    	return view('profile'/*, ['user_details' => $user_details]*/);
     }
 }
 

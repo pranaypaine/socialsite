@@ -6,7 +6,7 @@ Social Site
 
 @section('content')
     <div class="row">
-        <form class="col s12 m6" action="{{ route('signup') }}" method="POST">
+        <!--<form class="col s12 m6" action="{{ route('signup') }}" method="POST">
         <h1 class="blue-text center">Sign Up</h1>
       <div class="row">
         <div class="input-field col s12">
@@ -60,6 +60,6 @@ Social Site
         <i class="material-icons right">send</i>
         </button>
       </div>
-    </form>
+    </form>-->
     </div>
 @endsection

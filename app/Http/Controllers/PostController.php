@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 /**
@@ -19,11 +20,19 @@ class PostController extends Controller
 
 	public function postCreatePost(Request $request)
 	{
-		$post = new Post();
-		$post->post = $request['postcontent'];
-		$request->user()->posts()->save($post);
+		if ($request['postcontent'])
+		{
+			$post = new Post();
+			$post->post = $request['postcontent'];
+			$request->user()->posts()->save($post);
 
-		return redirect()->route('home');
+			return redirect()->route('home');
+		}
+		else
+		{
+			return redirect()->route('home')->with(['message' => 'Post cannot be blank' ]);
+		}
+
 	}
 
 	public function getDeletePost($post_id)
