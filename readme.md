@@ -1,6 +1,6 @@
 # Just another social networking website
 
-this project is build on laravel and materialize css.
+> this project is build on laravel and materialize css.
 
 ## License
 
